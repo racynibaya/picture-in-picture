@@ -1,5 +1,6 @@
 const videoElement = document.getElementById('video');
-const button = document.getElementById('button');
+const buttonStart = document.getElementById('button-start');
+const buttonShare = document.getElementById('button-share');
 
 const selectMediaStream = async function () {
   try {
@@ -15,15 +16,15 @@ const selectMediaStream = async function () {
   }
 };
 
-button.addEventListener('click', async () => {
+buttonStart.addEventListener('click', async () => {
   // Disable button
-  button.disabled = true;
+  buttonStart.disabled = true;
 
   // Start picture in picture
   await videoElement.requestPictureInPicture();
 
   // Enable button
-  button.disable = false;
+  buttonStart.disable = false;
 });
 
-selectMediaStream();
+buttonShare.addEventListener('click', selectMediaStream);

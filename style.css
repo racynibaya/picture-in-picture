@@ -14,11 +14,26 @@ html {
 }
 
 body {
+  background-color: #583975;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #583975;
 }
 
 .button-container {
@@ -55,4 +70,7 @@ button:active {
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.3);
 
   transition: 0.3s;
+}
+.button-container {
+  margin-right: 10px;
 }
